@@ -15,4 +15,4 @@ export default {
 };
 </script>
 
-<style src="./App.css"></style>
+<style lang="less" src="./App.less"></style>

@@ -67,4 +67,4 @@ export default {
 };
 </script>
 
-<style src="./Skills.css" scoped></style>
+<style lang="less" src="./Skills.less" scoped></style>

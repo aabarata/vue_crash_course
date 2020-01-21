@@ -1,5 +1,4 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css');
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import "./../../assets/variables.less";
 
 .holder {
     background: #ffffff;
@@ -9,16 +8,16 @@ ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    li{
+        padding: 20px;
+        font-size: 1.3em;
+        background-color: @lightBlue;
+        border-left: 5px solid @darkBlue;
+        border-bottom: 2px solid #fff;
+        color: #3E5252;
+    }
 }
 
-ul li{
-    padding: 20px;
-    font-size: 1.3em;
-    background-color: #E0EDF4;
-    border-left: 5px solid #3EB3F6;
-    border-bottom: 2px solid #fff;
-    color: #3E5252;
-}
 p {
     text-align: center;
     padding: 30px 0;
@@ -51,7 +50,7 @@ input {
     text-align: left;
     padding: 5px 20px;
     box-sizing: border-box;
-    background: #fdf2ce;
+    background: @lightYellow;
     font-weight: bold;
 }
 
