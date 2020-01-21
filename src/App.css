@@ -17,3 +17,7 @@ body, html {
 #app {
   width: 50%;
 }
+
+*:focus {
+  outline: none;
+}

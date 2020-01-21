@@ -3,7 +3,11 @@
     <div class="holder">
       <ValidationObserver v-slot="{ handleSubmit }">
         <form @submit.prevent="handleSubmit(addSkill)">
-          <ValidationProvider rules="minlength:5|required" v-slot="{ errors }">
+          <ValidationProvider
+            class="validatorWrapper"
+            rules="minlength:5|required"
+            v-slot="{ errors }"
+          >
             <input
               type="text"
               placeholder="Enter a skill you have..."
@@ -29,11 +33,10 @@
         >
           <li v-for="(data, index) in skills" :key="index">
             {{ data.skill }}
-            <i class="fa fa-minus-circle" v-on:click="remove(index)"/>
+            <i class="fa fa-minus-circle" v-on:click="removeSkill(index)" />
           </li>
         </transition-group>
       </ul>
-      <p>These are the skills that you possess.</p>
     </div>
   </div>
 </template>
@@ -57,7 +60,7 @@ export default {
       this.skills.push({ skill: this.skill });
       this.skill = "";
     },
-    remove(index) {
+    removeSkill(index) {
       this.skills.splice(index, 1);
     }
   }
